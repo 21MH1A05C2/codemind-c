@@ -1,26 +1,35 @@
 #include<stdio.h>
 int main()
 {
-    int x,y,r,c,co,n;
-    scanf("%d%d",&x,&y);
-    for(;x<=y;x++)
+    int a,b,i,k=0,d,n;
+    scanf("%d%d",&a,&b);
+    for(i=a;i<=b;i++)
     {
-        n=x;
-        co=0;
-        c=0;
+        n=i;
+        k=0;
         while(n)
         {
-            r=n%10;
-            n/=10;
-            co++;
-            if(r==0)
-            break;
-            if(x%r==0)
-            c++;
+          d=n%10;
+          if(d==0)
+          {
+              k=0;
+              break;
+          }
+          if(i%d==0)
+          {
+              k=1;
+          }
+          else
+          {
+              k=0;
+              break;
+          }
+          n=n/10;
         }
-        if(c==co)
-        {
-            printf("%d ",x);
-        }
+        if(k==1)
+    {
+        printf("%d ",i);
     }
+    }
+    
 }
