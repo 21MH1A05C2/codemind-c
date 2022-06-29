@@ -1,25 +1,16 @@
 #include<stdio.h>
 int main()
 {
-    int a,b,x,y,i,p;
-    scanf("%d%d",&a,&b);
-    if(a>b)
+    int m,n,max;
+    scanf("%d%d",&m,&n);
+    max=(m>n)?m:n;
+    while(1)
     {
-        x=a;
-        y=b;
-    }
-    else
-    {
-        x=b;
-        y=a;
-    }
-    for(i=1;i<x*b;i++)
-    {
-        p=x*i;
-        if(p%y==0)
-        {
-            printf("%d",p);
-            break;
+        if(max%m==0&&max%n==0){
+        printf("%d",max);
+        break;
         }
+        max++;
     }
+    return 0;
 }
