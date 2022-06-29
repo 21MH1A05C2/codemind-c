@@ -1,16 +1,16 @@
 #include<stdio.h>
-int main()
+int main ()
 {
-    int n,reversed = 0,remainder,original;
-    scanf("%d",&n);
-    original=n;
-    while(n!=0)
+    int N,rem,sum=0,t;
+    scanf("%d",&N);
+    t=N;
+    while(N>0)
     {
-        remainder=n%10;
-        reversed=reversed * 10 + remainder;
-        n/=10;
+        rem=N%10;
+        sum=sum*10+rem;
+        N=N/10;
     }
-    if(original==reversed)
+    if(t==sum)
     {
         printf("True");
     }
@@ -18,4 +18,5 @@ int main()
     {
         printf("False");
     }
+    return 0;
 }
