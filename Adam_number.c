@@ -1,29 +1,27 @@
 #include<stdio.h>
 int main()
 {
-    int num,m,r1,sum1=0,n,r2,sum2=0;
-    scanf("%d",&num);
-    m=num*num;
-    while(num>0)
+    int n,s,rev=0,r,rev1=0,r1,s1;
+    scanf("%d",&n);
+    s=n*n;
+    while (n)
     {
-        r1=num%10;
-        sum1=sum1*10+r1;
-        num=num/10;
-    }
-        n=sum1*sum1;
-       while(n>0)
-       {
-        r2=n%10;
-        sum2=sum2*10+r2;
+        r=n%10;
+        rev=rev*10+r;
         n=n/10;
     }
-    if(sum2==m)
+    s1=rev*rev;
+    while(s1)
     {
-    printf("True");
+        r1=s1%10;rev1=rev1*10+r1;
+        s1=s1/10;
+    }
+    if(rev1==s)
+    {
+        printf("True");
     }
     else
     {
-    printf("False");
+        printf("False");
     }
-    return 0;
 }
